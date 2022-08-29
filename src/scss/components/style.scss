@@ -1,0 +1,165 @@
+.page__body{
+  font-family: 'Aeonik';
+  font-style: normal;
+  font-size: 16px;
+  color: #FFFFFF;
+  width: 100%;
+  height: 100vh;
+  background: black;
+}
+.wrapper{
+  width: 100%;
+}
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 52px 70px 0px 70px;
+}
+h1,h3{
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+
+.glav{
+  h1{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+  }
+  p{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 31px;
+    color: #E5E5E5;
+  }
+}
+
+.image_text{
+  max-width: 1295px;
+  margin-top: 81px;
+  display: flex;
+  flex-wrap: wrap;
+  .image{
+    width: 282px;
+    height: 304px;
+    border-radius: 5px;
+    margin: 0px 24px 28px 0px;
+    display: flex;
+  }
+}
+
+.image:nth-child(4){
+  margin-right: 0;
+}
+
+
+.text_container{
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.text{
+  padding: 9px 19px 0px 20px;
+  width: 282px;
+  height: 75px;
+  background: rgba(9, 7, 7, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  h3{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.text_item{
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    .ellipse{
+      margin-bottom: 3px;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+.button{
+  margin-top: 81px;
+  padding-bottom: 86px;
+  display: flex;
+  justify-content: center;
+  .btn{
+  width: 204px;
+  height: 50px;
+  background: #3775ED;
+  color: #FFFFFF;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.01s ease, background-color 0.3s ease;
+  }
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+  .btn:hover {
+  background-color: #3774edb2;
+}
+
+
+@for $i from 1 through 6{
+  .image#{$i}{
+    background-image: url("../img/author/author_#{$i}.jpg");
+  }
+}
+
+
+
+@media screen and (max-width: 1342px){
+  .image:nth-child(4){
+    margin-right: 24px;
+  }
+}
+@media screen and (max-width: 1024px){
+  .container{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 425px){
+  .container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .glav{
+    h1{
+      text-align: center;
+    }
+    p{
+      text-align: center;
+    }
+  }
+  .image_text{
+    justify-content: center;
+    .image{
+      margin: 0px 0px 28px 0px;
+    }
+  }
+}
